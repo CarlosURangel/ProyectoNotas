@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note it</title>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Note it</h1>
+        <nav>
+            <ul>
+                <li class="opciones"><a href="papelera.html">Papelera</a></li>
+                <li class="opciones" id="logout">Cerrar sesión</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="divider"></div>
+    <main>
+        <section id="notas">
+            <h2>Mis notas:</h2>
+            <div class="notas-container"></div>
+        </section>
+    </main>
+    <button class="add-note" onclick="openModal()"></button>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Nueva nota</h2>
+            <form id="noteForm">
+                <input type="text" id="noteTitle" name="noteTitle" placeholder="Título">
+                
+                <select id="noteCategory" name="noteCategory">
+                    <option value="" disabled selected>Categoría</option>
+                    <option value="Productividad">Productividad</option>
+                    <option value="Tarea">Tarea</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Creatividad">Creatividad</option>
+                    <option value="Recordatorio">Recordatorio</option>
+                </select>
+                <textarea id="noteDescription" name="noteDescription" placeholder="Escribe algo..."></textarea>
+                
+                <button type="button" class="check"></button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Modal2 -->
+    <div id="modal2" class="modal2">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal2()">&times;</span>
+            <h2>Editar nota</h2>
+            <form id="noteForm">
+                <input type="text" id="noteTitle2" name="noteTitle" placeholder="Título">
+                
+                <select id="noteCategory2" name="noteCategory">
+                    <option value="" disabled selected>Categoría</option>
+                    <option value="Productividad">Productividad</option>
+                    <option value="Tarea">Tarea</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Creatividad">Creatividad</option>
+                    <option value="Recordatorio">Recordatorio</option>
+                </select>
+                <textarea id="noteDescription2" name="noteDescription" placeholder="Escribe algo..."></textarea>
+                
+                <button type="button" class="check" id="check2"></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

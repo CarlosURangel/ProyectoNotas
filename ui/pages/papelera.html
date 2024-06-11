@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note it</title>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+One&display=swap" rel="stylesheet">
+    <script defer src="../js/papelera.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Note it</h1>
+        <nav>
+            <ul>
+                <li class="opciones"><a href="notes.html">Notas</a></li>
+                <li class="opciones" id="logout">Cerrar sesión</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="divider"></div>
+    <main>
+        <section id="notas">
+            <h2>Mis notas:</h2>
+            <div class="notas-container">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
